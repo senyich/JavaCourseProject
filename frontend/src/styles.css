@@ -1,0 +1,70 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f6f2;
+  color: #212529;
+}
+
+.car-gradient {
+  background: linear-gradient(135deg, #f8f6f2 0%, #e8e0d4 100%);
+}
+
+.leather-texture {
+  background-color: #a38666;
+  background-image: 
+    radial-gradient(circle at 100% 150%, #a38666 24%, #8a6d52 25%, #8a6d52 28%, #a38666 29%, #a38666 36%, #8a6d52 36%, #8a6d52 40%, transparent 40%, transparent),
+    radial-gradient(circle at 0    150%, #a38666 24%, #8a6d52 25%, #8a6d52 28%, #a38666 29%, #a38666 36%, #8a6d52 36%, #8a6d52 40%, transparent 40%, transparent),
+    radial-gradient(circle at 50%  100%, #8a6d52 10%, #a38666 11%, #a38666 23%, #8a6d52 24%, #8a6d52 30%, #a38666 31%, #a38666 43%, #8a6d52 44%, #8a6d52 50%, #a38666 51%, #a38666 63%, #8a6d52 64%, #8a6d52 71%, transparent 71%, transparent),
+    radial-gradient(circle at 100% 50%, #8a6d52 5%, #a38666 6%, #a38666 15%, #8a6d52 16%, #8a6d52 20%, #a38666 21%, #a38666 30%, #8a6d52 31%, #8a6d52 35%, #a38666 36%, #a38666 45%, #8a6d52 46%, #8a6d52 49%, transparent 50%, transparent),
+    radial-gradient(circle at 0    50%, #8a6d52 5%, #a38666 6%, #a38666 15%, #8a6d52 16%, #8a6d52 20%, #a38666 21%, #a38666 30%, #8a6d52 31%, #8a6d52 35%, #a38666 36%, #a38666 45%, #8a6d52 46%, #8a6d52 49%, transparent 50%, transparent);
+  background-size: 100px 50px;
+}
+
+.chrome-effect {
+  background: linear-gradient(145deg, #e8e8e8, #c0c0c0);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.5);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1ece4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a38666;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8a6d52;
+}
