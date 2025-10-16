@@ -10,7 +10,7 @@ public class CarDTO {
     private Long id;
     private String brand;
     private String model;
-    private Integer productionYear;  // ИЗМЕНИТЕ ЗДЕСЬ
+    private Integer productionYear;  
     private String imageUrl;
     private List<CarSystemDTO> systems;
 
@@ -20,7 +20,7 @@ public class CarDTO {
         this.id = car.getId();
         this.brand = car.getBrand();
         this.model = car.getModel();
-        this.productionYear = car.getProductionYear();  // И ЗДЕСЬ
+        this.productionYear = car.getProductionYear();  
         this.imageUrl = car.getImageUrl();
 
         if (car.getSystems() != null) {
@@ -30,7 +30,7 @@ public class CarDTO {
         }
     }
 
-    // Геттеры и сеттеры
+    
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -40,7 +40,7 @@ public class CarDTO {
     public String getModel() { return model; }
     public void setModel(String model) { this.model = model; }
 
-    public Integer getProductionYear() { return productionYear; }  // И ЗДЕСЬ
+    public Integer getProductionYear() { return productionYear; }  
     public void setProductionYear(Integer productionYear) { this.productionYear = productionYear; }
 
     public String getImageUrl() { return imageUrl; }
