@@ -17,7 +17,7 @@ public class Car {
     @Column(nullable = false)
     private String model;
 
-    @Column(name = "production_year")  // ИЗМЕНИТЕ ЗДЕСЬ
+    @Column(name = "production_year")  
     private Integer productionYear;
 
     private String imageUrl;
@@ -33,7 +33,7 @@ public class Car {
         this.productionYear = productionYear;
     }
 
-    // Геттеры и сеттеры
+    
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
