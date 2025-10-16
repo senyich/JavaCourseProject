@@ -23,7 +23,7 @@ public class PartDTO {
         this.manufacturer = part.getManufacturer();
     }
 
-    // Геттеры и сеттеры
+    
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
