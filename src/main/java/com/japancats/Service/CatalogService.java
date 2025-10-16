@@ -33,28 +33,28 @@ public class CatalogService {
                 .collect(Collectors.toList());
     }
 
-
+//По айдишнику
     public CarDTO getCarById(Long carId) {
         return carRepository.findById(carId)
                 .map(CarDTO::new)
                 .orElse(null);
     }
 
-
+//Система по айдишнику
     public List<CarSystemDTO> getSystemsByCarId(Long carId) {
         return carSystemRepository.findByCarId(carId).stream()
                 .map(CarSystemDTO::new)
                 .collect(Collectors.toList());
     }
 
-
+//Схема получить
     public SystemDiagramDTO getDiagramWithParts(Long diagramId) {
         return systemDiagramRepository.findById(diagramId)
                 .map(SystemDiagramDTO::new)
                 .orElse(null);
     }
 
-
+//Запчасть по номеру
     public PartDTO getPartByNumber(String partNumber) {
         return partRepository.findByPartNumber(partNumber)
                 .map(PartDTO::new)
