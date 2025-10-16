@@ -29,7 +29,7 @@ services:
       - /app/node_modules
     networks:
       - app-network
-    command: npm run serve
+    # command: npm run serve
 
 networks:
   app-network:

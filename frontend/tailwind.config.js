@@ -6,7 +6,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Основная цветовая палитра для автомобильной тематики
         'auto-gray': {
           50: '#f8f9fa',
           100: '#e9ecef',

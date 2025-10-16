@@ -32,9 +32,9 @@ const Header: React.FC = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-heading font-bold text-auto-beige-100">
-                  Auto<span className="text-auto-brown-400">Premium</span>
+                  Japan<span className="text-auto-brown-400">Cats</span>
                 </h1>
-                <p className="text-auto-beige-300 text-xs">Премиальные запчасти</p>
+                <p className="text-auto-beige-300 text-xs">Премиальные японские запчасти</p>
               </div>
             </div>
 
