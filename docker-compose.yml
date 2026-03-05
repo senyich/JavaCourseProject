@@ -5,31 +5,28 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: japancats-backend
+    container_name: pajeroparts-backend
     ports:
       - "8080:8080"
     environment:
       - SPRING_PROFILES_ACTIVE=dev
     volumes:
-      - ./backend/src:/app/src
-      - ./backend/pom.xml:/app/pom.xml
+      - ./backend/data:/app/data
+      - ./backend/uploads:/app/uploads
     networks:
       - app-network
-    command: mvn spring-boot:run
 
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: japancats-frontend
+    container_name: pajeroparts-frontend
     ports:
       - "80:80"
-    volumes:
-      - ./frontend:/app
-      - /app/node_modules
+    depends_on:
+      - backend
     networks:
       - app-network
-    # command: npm run serve
 
 networks:
   app-network:

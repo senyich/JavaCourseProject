@@ -5,8 +5,8 @@ const Header: React.FC = () => {
 
   const navigationItems = [
     { name: 'Главная', href: '/' },
-    { name: 'О нас', href: '/about' },
-    { name: 'Контакты', href: '/contact' },
+    { name: 'Сервисный мануал', href: '/manual' },
+    { name: 'Инфо', href: '/info' },
   ];
 
   return (
@@ -15,9 +15,9 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center text-sm">
             <div className="flex space-x-4">
-              <span>🚗 Запчасти</span>
+              <span>🚗 Запчасти для Mitsubishi Pajero</span>
               <span>•</span>
-              <span>📞 +7 (913) 257-58-19</span>
+              <span>📞 +7 (952)-003-81-73</span>
             </div>
           </div>
         </div>
@@ -26,18 +26,24 @@ const Header: React.FC = () => {
       <div className="bg-auto-gray-900">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
+            {/* Логотип */}
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-auto-beige-400 to-auto-brown-600 rounded-full flex items-center justify-center chrome-effect">
-                <span className="text-auto-gray-800 font-heading font-bold text-lg">A</span>
-              </div>
+             <div className="w-12 h-12 bg-auto-brown-600 rounded-full flex items-center justify-center text-auto-beige-100">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                 <path d="M5 13l-2 4h18l-2-4H5z" />
+                 <circle cx="7" cy="17" r="2" />
+                 <circle cx="17" cy="17" r="2" />
+               </svg>
+             </div>
               <div>
                 <h1 className="text-2xl font-heading font-bold text-auto-beige-100">
-                  Japan<span className="text-auto-brown-400">Cats</span>
+                  Pajero<span className="text-auto-brown-400">Parts</span>
                 </h1>
-                <p className="text-auto-beige-300 text-xs">Премиальные японские запчасти</p>
+                <p className="text-auto-beige-300 text-xs">Запчасти для Mitsubishi Pajero</p>
               </div>
             </div>
 
+            {/* Навигация */}
             <nav className="hidden md:flex space-x-8">
               {navigationItems.map((item) => (
                 <a
@@ -51,12 +57,7 @@ const Header: React.FC = () => {
               ))}
             </nav>
 
-            <div className="hidden md:flex items-center space-x-4">
-              <button className="bg-auto-brown-600 hover:bg-auto-brown-700 text-auto-beige-100 px-6 py-2 rounded-lg transition-colors duration-200 font-medium">
-                Поиск вашей модели
-              </button>
-            </div>
-
+            {/* Кнопка мобильного меню */}
             <button
               className="md:hidden text-auto-beige-200 p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -70,6 +71,7 @@ const Header: React.FC = () => {
           </div>
         </div>
 
+        {/* Мобильное меню */}
         {isMenuOpen && (
           <div className="md:hidden bg-auto-gray-800 border-t border-auto-gray-700 animate-slide-in">
             <div className="container mx-auto px-4 py-4">
@@ -84,11 +86,6 @@ const Header: React.FC = () => {
                     {item.name}
                   </a>
                 ))}
-                <div className="flex space-x-4 pt-4">
-                  <button className="flex-1 bg-auto-brown-600 hover:bg-auto-brown-700 text-auto-beige-100 px-4 py-2 rounded-lg transition-colors duration-200 font-medium text-sm">
-                    Найти свой автомобиль
-                  </button>
-                </div>
               </nav>
             </div>
           </div>

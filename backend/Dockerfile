@@ -10,11 +10,17 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:17-jre
 WORKDIR /app
 
-COPY --from=builder /app/target/japancats-backend-0.0.1-SNAPSHOT.jar app.jar
+# Создаем папки для данных
+RUN mkdir -p /app/data /app/uploads/diagrams
+
+COPY --from=builder /app/target/pajeroparts-backend-1.0.0.jar app.jar
 
 RUN groupadd -r spring && useradd -r -g spring spring
+RUN chown -R spring:spring /app
 USER spring
 
 EXPOSE 8080
+
+VOLUME ["/app/data", "/app/uploads"]
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
